@@ -1,21 +1,31 @@
-import 'package:diohttp_app/Routes/route.dart';
+import 'package:diohttp_app/Model/transactions_view_model.dart';
+import 'package:diohttp_app/Respons/transactions_repo.dart';
+import 'package:diohttp_app/Screen/upload_file_toserver.dart';
+import 'package:diohttp_app/Service/api_service.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(ChangeNotifierProvider(
+    create: (context) => TransactionsViewModel(
+      transactionsRepo: TransactionsRepo(apiService: ApiService()),
+    ),
+    child: MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Dio  Http',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.blue),
-      onGenerateRoute: MYRoute().onGEnereteRoute,
-      initialRoute: "/splash",
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: UploadFileToServer(),
     );
   }
 }
