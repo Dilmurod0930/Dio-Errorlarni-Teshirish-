@@ -48,10 +48,6 @@ class _UploadFileToServerState extends State<UploadFileToServer> {
                   }
                 },
                 child: const Text("Select file")),
-            ElevatedButton(
-              onPressed: () {},
-              child: const Text("Upload  file"),
-            ),
             Text(
               status,
               style: const TextStyle(
@@ -60,9 +56,16 @@ class _UploadFileToServerState extends State<UploadFileToServer> {
               ),
             ),
             file != null
-                ? Image.file(
-                    file!,
-                    height: 300,
+                ? Container(
+                    height: MediaQuery.of(context).size.height * 0.7,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Colors.transparent,
+                        borderRadius: BorderRadius.circular(22)),
+                    child: Image.file(
+                      file!,
+                      fit: BoxFit.cover,
+                    ),
                   )
                 : SizedBox(),
           ],
