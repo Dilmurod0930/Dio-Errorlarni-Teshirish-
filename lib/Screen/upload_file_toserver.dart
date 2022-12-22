@@ -48,10 +48,16 @@ class _UploadFileToServerState extends State<UploadFileToServer> {
                   }
                 },
                 child: const Text("Select file")),
-            ElevatedButton(onPressed: () {}, child: const Text("Upload  file")),
+            ElevatedButton(
+              onPressed: () {},
+              child: const Text("Upload  file"),
+            ),
             Text(
               status,
-              style: const TextStyle(fontSize: 40, color: Colors.tealAccent),
+              style: const TextStyle(
+                fontSize: 40,
+                color: Colors.tealAccent,
+              ),
             ),
             file != null
                 ? Image.file(
