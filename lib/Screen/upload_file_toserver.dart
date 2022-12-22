@@ -67,7 +67,7 @@ class _UploadFileToServerState extends State<UploadFileToServer> {
                       fit: BoxFit.cover,
                     ),
                   )
-                : SizedBox()
+                : const SizedBox()
           ],
         ),
       ),
