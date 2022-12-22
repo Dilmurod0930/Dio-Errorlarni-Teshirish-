@@ -60,14 +60,14 @@ class _UploadFileToServerState extends State<UploadFileToServer> {
                     height: MediaQuery.of(context).size.height * 0.7,
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: Colors.transparent,
+                        color: Colors.transparent,
                         borderRadius: BorderRadius.circular(22)),
                     child: Image.file(
                       file!,
                       fit: BoxFit.cover,
                     ),
                   )
-                : SizedBox(),
+                : SizedBox()
           ],
         ),
       ),
