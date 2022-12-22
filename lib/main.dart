@@ -10,7 +10,7 @@ void main() {
     create: (context) => TransactionsViewModel(
       transactionsRepo: TransactionsRepo(apiService: ApiService()),
     ),
-    child: MyApp(),
+    child: const MyApp(),
   ));
 }
 
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: UploadFileToServer(),
+      home: const UploadFileToServer(),
     );
   }
 }
