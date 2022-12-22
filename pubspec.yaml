@@ -54,6 +54,14 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
 
+
+flutter_native_splash:
+  image: assets/peach.jpeg
+  color: "#2EBD5F"
+  fullscreen: true
+  android: true
+  ios: true
+
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
